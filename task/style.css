@@ -1,0 +1,616 @@
+/* Constants */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.clr{
+    clear: both;
+}
+
+.navbar {
+    background-color:rgba(133, 133, 254, 0.92);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    width: 120px;
+    margin:10px 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 40px;
+
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.home{
+    height: 800px;
+    background-image: url("./images/full-8-1.jpeg");
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.home .text-home{
+    margin-top: 200px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.92);
+}
+.home .text-home::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:rgba(133, 133, 254, 0.92);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+.home .text-home p{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px 0;
+    line-height: 41px;
+    font-family: "Open Sans", sans-serif;
+}
+.home .text-home h1{
+    text-transform: capitalize;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    margin-top: -10px;
+    line-height: 41px;
+    font-family: "Open Sans", sans-serif;
+}
+.home .text-home .btn{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 12px;
+    padding: 15px 28px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(18, 18, 18);
+    border-radius: 3px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+    z-index: 1;
+}
+.btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    transition: all .4s;
+    z-index: -1;
+}
+.home .text-home .btn:hover::after{
+    background-color:rgba(235, 226, 226, 0.788);
+}
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header h1 {
+    font-size: 22.5px;
+    font-weight: 400;
+    line-height: 31px;
+    color: rgb(48, 48, 48);  
+    margin-top: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18.5px;
+    font-weight: 400;
+    line-height: 33.7px;
+    margin-top: 40px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(96, 96, 96);    ;
+}
+.features-grid {
+    font-family: "Open Sans", sans-serif;
+    padding: 60px 0;
+    
+}
+.features-grid .first .feature{
+    width: 33%;
+    float: left;
+    padding: 20px;
+ 
+}
+.features-grid .feature h2{
+    color: rgb(48, 48, 48);
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23.4px;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.features-grid .feature p{
+    color: rgb(136, 136, 136);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26.04px;
+    margin-bottom: 7px;
+    width: 85%;
+    margin-left: 40px;
+}
+.feature .icon{
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+    position: relative;
+    margin-bottom: 5px;
+    color: rgb(48, 48, 48);
+}
+
+ .header .subtitle {
+    color: rgb(136, 136, 136);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 31px;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 17px;
+    max-width: 720px;
+    margin-bottom: 40px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.filters button {
+    background: none;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    color: rgb(148, 148, 148);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.filters button:hover,
+.filters button.active {
+    color: #000;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 20px;
+}
+.grid .card-content{
+    text-align: center;
+}
+.card .card-image .btnss span{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5;
+    background-color: rgb(209, 207, 207);
+}
+
+.card {
+    background: white;
+    overflow: hidden;
+    border: 1px solid whitesmoke;
+    text-align: center;
+
+}
+.card .card-image{
+    overflow: hidden;
+    position: relative;
+}
+.card .card-image .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(118, 126, 118, 0.731) ;
+    position: absolute;
+    inset: 0;  
+    opacity: 0;
+    transition: all 0.5s;
+ }
+ .card .card-image .overlay .btnss {
+    position: relative;
+    top: 50%;
+    transform: translateY(20px);
+    transition: all .5s;
+ }
+ .card:hover .card-image .overlay {
+    transform: scale(1.1);
+    opacity: 1;
+ }
+ .card:hover .card-image .overlay .btnss{
+    transform: translateY(0);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+
+}
+.card:hover{
+    transform: scale(1);
+}
+.card-content {
+    padding: 20px;
+}
+.card-content p{
+    color: rgb(136, 136, 136);
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 5px;
+}
+.card-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 26px;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+}
+
+.testimonials-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-heading {
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 41px;
+}
+
+.testimonials-subtitle {
+    font-size: 17px;
+    color: rgb(136, 136, 136);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 31px;
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background: #f8f8f8;
+    font-family: "Open Sans", sans-serif;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.testimonial-text {
+    color: rgb(104, 104, 104);
+    line-height: 27px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.testimonial-author {
+    color: rgb(104, 104, 104);
+    line-height: 29px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.testimonial-company {
+    color: rgb(104, 104, 104);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    background: #666;
+}
+
+
+.parent h2{
+    color: rgb(48, 48, 48);
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.parent .pp{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(136, 136, 136);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 31px;
+    margin:  10px 40px;
+}
+.parent{
+    padding: 70px 0;
+}
+.parent .grand{
+    width: 33.3333%;
+    padding: 0 15px;
+    float: left;
+}
+.card{
+    border: 1px solid whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.card .cardinfo{
+    padding: 15px;
+}
+.card .cardinfo h5{
+    color: rgb(51, 51, 51);
+    margin: 12px 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27.8px;
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+}
+.card .cardinfo p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    padding-bottom: 10px;
+    color: rgb(170, 170, 170);
+    text-align: left;
+}
+.card .cardinfo .b{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    padding-bottom: 15px;
+    color: rgb(84, 83, 83);
+}
+.card .cardinfo .bb{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    color: rgb(84, 83, 83);
+}
+.card .cardinfo .bb span{
+    margin-left: 10px;
+    transition: all .3s;
+}
+.card:hover .cardinfo .bb {
+    color: #09c;
+}
+.feeling .small{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.feeling .small h2{
+    color: rgb(48, 48, 48);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 44px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.feeling .small p{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.feeling .small .btn{
+    text-transform: uppercase;
+    background-color: rgb(25, 118, 210);
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 12px;
+    padding: 20px 28px;
+    border-radius: 3px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+    z-index: 1;
+}
+
+.feeling .small .btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    transition: all .4s;
+    z-index: -1;
+}
+.feeling .small .btn:hover::after{
+    background-color:rgba(46, 44, 44, 0.916);
+}
+
+.footer{
+    background-color: rgb(27, 27, 27);    ;
+    padding: 60px 0;
+    background-attachment: scroll;
+    color: rgb(121, 121, 121);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    padding:  50px ;
+    position: relative;
+}
+.footer .last{
+    width: 33.3333%;
+    float: left;
+    padding: 20px;
+}
+.footer .last h3{
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px ;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23.4px;
+    opacity: 1;
+}
+.footer .last p{
+    color: rgb(121, 121, 121);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26.7px;
+    margin-bottom: 20px;
+}
+.footer .last ul li {
+    color: rrgb(150, 150, 150);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27.7px;
+    margin-bottom: 6px;
+    padding-bottom: 7px;
+    text-align: left;
+    list-style-type: none;
+    color:rgb(121, 121, 121) ;
+}
+.footer .last ul li span{
+    margin-right: 10px;
+}
+.footer .last .icon li {
+    cursor: pointer;
+    transition: all .3s;
+}
+.footer .last .icon li:hover{
+    color: white;
+}
+
+.last-one{
+   height: 66px;
+   width: auto;
+    
+    background-color: rgb(21, 21, 21);
+}
+.last-one .info{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+.last-one .info p{
+    color: rgb(119, 119, 119);
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400px;
+    padding-left: 40px;
+}
+.last-one .info .icons{
+    padding-left: 200px;
+}
+.last-one .info span{
+    padding: 30px;
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+    transition: all .3s;
+}
+.last-one .info span:hover{
+    color: blue;
+}
+.last-one .info .orange:hover{
+    color: rgb(255, 55, 0);
+}
+
